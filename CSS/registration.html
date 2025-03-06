@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    <div class="Registration-form">
+        <h1>Registration Form</h1>
+        <form action="">
+            <p>Full Name:</p>
+            <input type="text" id="fullname" name="fullname" placeholder="Full Name">
+
+            <p>User Name:</p>
+            <input type="text" id="username" name="username" placeholder="User Name">
+
+            <p>Email:</p>
+            <input type="email" id="email" name="email" placeholder="Email">
+
+            <p>Date of Birth:</p>
+            <input type="date" id="dob" name="dob">
+
+            <p>Gender:</p>
+            <label><input type="radio" name="gender" value="male"> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+            <label><input type="radio" name="gender" value="other"> Other</label>
+
+            <p>Country:</p>
+            <select id="country" name="country">
+                <option value="">Select Country</option>
+                <option value="usa">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="india">India</option>
+                <option value="canada">Canada</option>
+                <option value="australia">Australia</option>
+            </select>
+
+            <p>Password:</p>
+            <input type="password" id="password" name="password" placeholder="Password">
+
+            <button type="submit">REGISTER</button>
+        </form>
+    </div>
+</body> 
+</html>
