@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hover to Change Image & Text</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #image {
+            width: 400px;
+            height: 300px;
+            border: 2px solid #000;
+        }
+        #text {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function changeContent() {
+            document.getElementById("image").src = "night.jpg"; 
+            document.getElementById("text").innerText = "Thats the New Picture!";
+        }
+        function resetContent() {
+            document.getElementById("image").src = "sun.jpg"; 
+            document.getElementById("text").innerText = "Hover over me!";
+        }
+    </script>
+</head>
+<body>
+    <h2>Hover over the image to change it!</h2>
+    <img id="image" src="sun.jpg" onmouseover="changeContent()" onmouseout="resetContent()">
+    <p id="text">Hover over me!</p>
+</body>
+</html>

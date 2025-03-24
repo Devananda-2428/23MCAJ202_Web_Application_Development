@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        body {
+           
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+        input[type="text"], input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 15px;
+            margin: 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            background: orange;
+            color: white;
+            border: none;
+            padding: 15px;
+            width: calc(100% - 20px);
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background: #218838;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            var name = document.forms["regForm"]["name"].value;
+            var email = document.forms["regForm"]["email"].value;
+            var password = document.forms["regForm"]["password"].value;
+            var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+            if (name == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+            if (!email.match(emailPattern)) {
+                alert("Enter a valid email address");
+                return false;
+            }
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long");
+                return false;
+            }
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form name="regForm" onsubmit="return validateForm()">
+            <input type="text" name="name" placeholder="Enter your Name"><br>
+            <input type="text" name="email" placeholder="Enter your Email"><br>
+            <input type="password" name="password" placeholder="Enter your Password"><br>
+            <input type="submit" value="REGISTER">
+        </form>
+    </div>
+</body>
+</html>
